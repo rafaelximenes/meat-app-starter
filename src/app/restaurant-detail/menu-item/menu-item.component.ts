@@ -1,15 +1,40 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
+import { MenuItem } from './menu-item.model';
+import {state, trigger, animate, style, transition} from '@angular/animations'
 
 @Component({
   selector: 'mt-menu-item',
   templateUrl: './menu-item.component.html',
-  styleUrls: ['./menu-item.component.css']
+  styleUrls: ['./menu-item.component.css'],
+  animations: [
+    trigger('menuItemAppeared',[
+      state('ready', style({
+        opacity: 1
+      })),
+      transition('void => ready', [
+        style({
+          opacity: 0,
+          transform: 'translateY(-20px)'
+        }),
+        animate('300ms 0s ease-in')
+      ])
+    ])
+  ]
 })
 export class MenuItemComponent implements OnInit {
+
+  @Input() menuItem: MenuItem
+  @Output() add = new EventEmitter()
+
+  menuItemState = 'ready'
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  emitAddEvent() {
+    this.add.emit(this.menuItem)
   }
 
 }

@@ -370,5 +370,85 @@
       "restaurantId": "tasty-treats"
     }
   ],
-  "orders": []
+  "orders": [
+    {
+      "address": "Rua A",
+      "number": "1",
+      "optionalAddress": "",
+      "paymentOption": "D",
+      "orderItems": [
+        {
+          "quantity": 4,
+          "menuId": "cup-cake"
+        }
+      ],
+      "id": 1
+    },
+    {
+      "address": "aaaaa",
+      "number": "1",
+      "optionalAddress": "",
+      "paymentOption": "D",
+      "orderItems": [
+        {
+          "quantity": 1,
+          "menuId": "bread"
+        },
+        {
+          "quantity": 1,
+          "menuId": "donut"
+        }
+      ],
+      "id": 2
+    },
+    {
+      "address": "Rua B",
+      "number": "1",
+      "optionalAddress": "",
+      "paymentOption": "B",
+      "orderItems": [
+        {
+          "quantity": 2,
+          "menuId": "cup"
+        },
+        {
+          "quantity": 2,
+          "menuId": "straw"
+        }
+      ],
+      "id": 3
+    },
+    {
+      "name": "Rafael Ximenes",
+      "email": "rafaximenes1@gmail.com",
+      "emailConfirmation": "rafaximenes1@gmail.com",
+      "address": "Shtn trecho 1 lt 2, bloco 3, apt 210",
+      "number": "210",
+      "optionalAddress": "",
+      "paymentOption": "D",
+      "orderItems": [
+        {
+          "quantity": 1,
+          "menuId": "cup-cake"
+        }
+      ],
+      "id": 4
+    },
+    {
+      "name": "juliana@gmail.com",
+      "email": "juliana@gmail.com",
+      "emailConfirmation": "juliana@gmail.com",
+      "address": "juliana@gmail.com",
+      "number": "222",
+      "optionalAddress": "",
+      "paymentOption": "D",
+      "orderItems": [
+        {
+          "quantity": 1,
+          "menuId": "cup-cake"
+        }
+      ],
+      "id": 5
+    }
+  ]
 }

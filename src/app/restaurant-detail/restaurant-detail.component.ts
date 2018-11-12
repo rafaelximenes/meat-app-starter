@@ -10,14 +10,13 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class RestaurantDetailComponent implements OnInit {
 
-  restaurante: Restaurant
+  restaurant: Restaurant
 
   constructor(private restaurantService: RestaurantesService, private route: ActivatedRoute) { }
 
   ngOnInit() {
-    console.log(this.route.snapshot.params['id'])
     this.restaurantService.restaurantById(this.route.snapshot.params['id'])
-      .subscribe(restaurant => this.restaurante = restaurant)
+      .subscribe(restaurant => this.restaurant = restaurant)
   }
 
 }
